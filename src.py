@@ -10,7 +10,8 @@ def validate(seq):
 	if len(cpf) != 11:
 		return False
 
-	#  Check if all numbers on sequence are equal, ex.: 111.111.111-11
+	#  Check if all numbers are equal, ex.: 111.111.111-11
+	#  These CPF sequences are considered invalid, though they pass the validation
 	if cpf == cpf[::-1]:
 		return False
 
