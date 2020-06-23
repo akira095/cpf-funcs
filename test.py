@@ -1,8 +1,8 @@
 from src import validate, gen
 
 option = int(input('1 - Validar CPF\n'
-					   '2 - Gerar CPF válido\n'
-					   '>>> '))
+		   '2 - Gerar CPF válido\n'
+		   '>>> '))
 	
 if option == 1:
     number = input('Digite o CPF: ').strip()
