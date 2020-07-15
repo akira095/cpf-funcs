@@ -32,14 +32,14 @@ def validate(sequence, state=False):
         value = sum((cpf[num] * ((i+1) - num) for num in range(0, i)))
         digit = ((value * 10) % 11) % 10
         if digit != cpf[i]:
-            return 'CPF inválido.'
+            return False
     
     #  Get state of origin
     if state:
         code = cpf[8]
         print(f'Região fiscal: {", ".join(fiscalCodes[code])}')
 
-    return 'CPF válido.'
+    return True
 
 def gen(originState=None):
     #  Generate the first digits (and make sure they're not all equal)
@@ -65,8 +65,3 @@ def gen(originState=None):
     #  Return CPF as string
     result = ''.join(map(str, cpf))
     return result
-
-#  Validador: validate('79225304390')
-#  Para mostrar a região fiscal do CPF, se válido, use state=True no comando anterior.
-#  Gerador: gen()
-#  Para gerar um CPF de um determinado estado, informe a sigla entre os parênteses, ex.: gen('CE')
