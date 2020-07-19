@@ -5,17 +5,14 @@ A função gen() irá gerar um número de CPF válido aleatório. Para gerar um 
 
         > from cpf import validate, gen
         > validate('79225304390')
+        # True
         > validate('792.253.043-90', state=True)
+        # Região fiscal: CE, MA, PI
+        # True
         > gen()
+        # '40422942600'
         > gen('CE')
-
-        #  Output
-        > True
-        > Região fiscal: CE, MA, PI
-        True
-        > '40422942600'
-        > '66663338374'
-
+        # '66663338374'
 
 ## Aviso
 Este programa foi criado com o intuito de testar softwares e outras aplicações, e os dados aqui gerados são aleatórios e não têm a intenção de representar pessoas reais. A má utilização deste programa é de total responsabilidade do usuário.
